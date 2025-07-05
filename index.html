@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Verb SER - Grammar Cheat Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            color: #373f45;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ef7c8e 0%, #db6565 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .verb-emoji {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .grid-two-columns {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 30px;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255,255,255,0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #ef7c8e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #ef7c8e;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #373f45;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Conjugation Table */
+        .conjugation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .conjugation-table th {
+            background: #7ba1a5;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .conjugation-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .conjugation-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .spanish-text {
+            font-weight: 600;
+            color: #373f45;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* DOCTOR Mnemonic */
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .doctor-item {
+            background: rgba(123,161,165,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #7ba1a5;
+        }
+
+        .doctor-letter {
+            font-weight: 700;
+            color: #7ba1a5;
+            font-size: 1.2rem;
+        }
+
+        .doctor-word {
+            font-weight: 600;
+            color: #373f45;
+            margin: 5px 0;
+        }
+
+        .doctor-example {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .doctor-translation {
+            font-size: 0.75rem;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Remove unused examples grid-column rule */
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .example-item {
+            background: rgba(239,124,142,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ef7c8e;
+        }
+
+        .example-spanish {
+            font-weight: 600;
+            color: #373f45;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .example-english {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* Tips Section */
+        .tip {
+            background: linear-gradient(135deg, #e89a8a 0%, #ffe8e3 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: none;
+            grid-column: 1 / -1;
+        }
+
+        .tip h3 {
+            color: #373f45;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip p {
+            color: #373f45;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: #373f45;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #ef7c8e !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-two-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .doctor-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .verb-emoji {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="verb-emoji">🔗</div>
+            <h1>EL VERBO SER</h1>
+            <div class="subtitle">Essential Spanish Grammar Reference | Spanish Learning Edge</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>💡 ¿Por qué dos verbos "to be"?</h2>
+                <div style="margin-top: 15px; line-height: 1.8;">
+                    <p>• While English uses just one verb for "to be," Spanish uses two: <strong>ser</strong> and <strong>estar</strong>. Knowing which one to use can feel confusing at first.</p>
+                    <p style="margin-top: 10px;">• In Spanish, <strong>ser</strong> is commonly taught as the verb used for <strong>inherent or permanent qualities</strong>, <strong>identity and characteristics</strong>, while <strong>estar</strong> is taught as used for <strong>temporary states, condition or locations</strong>. This general rule is a great starting point.</p>
+                    <p style="margin-top: 15px; font-weight: 600; color: #ef7c8e;">🧠 You can also think of it like this:</p>
+                    <p style="margin-top: 10px;">• <strong>SER</strong> describes <em>what</em> something is, while <strong>ESTAR</strong> describes <em>how</em> something is—often reflecting a <em>change of condition</em>.</p>
+                </div>
+            </div>
+
+            <!-- Two Column Section -->
+            <div class="grid-two-columns">
+                <!-- Conjugation Section -->
+                <div class="section">
+                    <h2>📝 Conjugations</h2>
+                    <table class="conjugation-table">
+                        <tr>
+                            <th>Pronombre</th>
+                            <th>Conjugación</th>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Yo</span> <span class="english-text">(I)</span></td>
+                            <td><span class="spanish-text">soy</span> <span class="english-text">- am</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Tú</span> <span class="english-text">(You informal)</span></td>
+                            <td><span class="spanish-text">eres</span> <span class="english-text">- are</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Él/Ella</span> <span class="english-text">(He/She)</span></td>
+                            <td><span class="spanish-text">es</span> <span class="english-text">- is</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Usted</span> <span class="english-text">(You formal)</span></td>
+                            <td><span class="spanish-text">es</span> <span class="english-text">- is</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Nosotros</span> <span class="english-text">(We)</span></td>
+                            <td><span class="spanish-text">somos</span> <span class="english-text">- are</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Ellos/Ellas</span> <span class="english-text">(They)</span></td>
+                            <td><span class="spanish-text">son</span> <span class="english-text">- are</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="spanish-text">Ustedes</span> <span class="english-text">(You all)</span></td>
+                            <td><span class="spanish-text">son</span> <span class="english-text">- are</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- DOCTOR Mnemonic -->
+                <div class="section">
+                    <h2>🎯 When to use SER</h2>
+                    <p style="margin-bottom: 15px; font-weight: 500;">Remember: <strong>DOCTOR</strong></p>
+                    <div class="doctor-grid">
+                        <div class="doctor-item">
+                            <div class="doctor-letter">D</div>
+                            <div class="doctor-word">Description</div>
+                            <div class="doctor-example">Ella es alta <em>(She is tall)</em></div>
+                        </div>
+                        <div class="doctor-item">
+                            <div class="doctor-letter">O</div>
+                            <div class="doctor-word">Occupation</div>
+                            <div class="doctor-example">Soy profesora <em>(I am a teacher)</em></div>
+                        </div>
+                        <div class="doctor-item">
+                            <div class="doctor-letter">C</div>
+                            <div class="doctor-word">Characteristic</div>
+                            <div class="doctor-example">Es inteligente <em>(He/She is intelligent)</em></div>
+                        </div>
+                        <div class="doctor-item">
+                            <div class="doctor-letter">T</div>
+                            <div class="doctor-word">Time</div>
+                            <div class="doctor-example">Son las tres <em>(It's three o'clock)</em></div>
+                        </div>
+                        <div class="doctor-item">
+                            <div class="doctor-letter">O</div>
+                            <div class="doctor-word">Origin</div>
+                            <div class="doctor-example">Soy de México <em>(I am from Mexico)</em></div>
+                        </div>
+                        <div class="doctor-item">
+                            <div class="doctor-letter">R</div>
+                            <div class="doctor-word">Relationship</div>
+                            <div class="doctor-example">Es mi hermana <em>(She is my sister)</em></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examples Section -->
+            <div class="section">
+                <h2>💡 Common Examples</h2>
+                <div class="examples-grid">
+                    <div class="example-item">
+                        <div class="example-spanish">¿Cómo te llamas?</div>
+                        <div class="example-english">What's your name?</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Me llamo María</div>
+                        <div class="example-english">My name is María</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">¿De dónde eres?</div>
+                        <div class="example-english">Where are you from?</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Soy de Estados Unidos</div>
+                        <div class="example-english">I'm from the United States</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">¿Qué hora es?</div>
+                        <div class="example-english">What time is it?</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Son las dos y media</div>
+                        <div class="example-english">It's two thirty</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Ella es mi profesora</div>
+                        <div class="example-english">She is my teacher</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Somos estudiantes</div>
+                        <div class="example-english">We are students</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Spanish Learning Edge LLC | Professional Spanish Grammar Resources for Educators
+        </div>
+    </div>
+</body>
+</html>
