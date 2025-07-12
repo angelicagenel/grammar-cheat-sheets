@@ -1,15 +1,10 @@
----
+## 🛡️ License
 
-### 📌 Licencia
+This project and its contents (including digital flashcards, worksheets, and grammar resources) are the intellectual property of Angélica García Genel / Spanish Learning Edge LLC.
 
-![Licencia CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)
+They were created using AI-assisted tools (ChatGPT, Claude.ai) under valid commercial-use agreements, and are intended for educational purposes only.
 
-Estas tarjetas están protegidas bajo la licencia **Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)**.  
-Puedes usarlas libremente con fines personales, educativos o no comerciales, **siempre dando el crédito correspondiente**.
+❗ Redistribution, resale, or modification without express permission is strictly prohibited.
 
-🚫 **No está permitido su uso comercial**, reproducción en plataformas de pago, ni su reventa sin autorización previa.
-
-Para permisos comerciales o colaboraciones, por favor contacta a: [success@spanish-learning-edge.com]
-
-🔗 Más información sobre esta licencia:  
-[https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
+🔗 For custom licenses or educational use, please reach out:
+📩 success@spanish-learning-edge.com
