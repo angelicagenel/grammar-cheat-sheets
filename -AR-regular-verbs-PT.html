@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Regular -AR Verbs - Grammar Cheat Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            color: #373f45;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ef7c8e 0%, #db6565 100%);
+            color: white;
+            padding: 25px 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .verb-emoji {
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255,255,255,0.8);
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid #ef7c8e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #ef7c8e;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h3 {
+            color: #373f45;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 12px 0 8px 0;
+        }
+
+        /* Introduction */
+        .intro-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .intro-text p {
+            margin-bottom: 8px;
+        }
+
+        /* When to Use Grid */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 12px;
+        }
+
+        .usage-item {
+            background: rgba(123,161,165,0.1);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #7ba1a5;
+        }
+
+        .usage-item h3 {
+            color: #7ba1a5;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .usage-item p {
+            font-size: 0.8rem;
+            margin-bottom: 3px;
+        }
+
+        .usage-example {
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Conjugation Box */
+        .conjugation-box {
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #ef7c8e;
+            margin-bottom: 20px;
+        }
+
+        .conjugation-box h3 {
+            color: #ef7c8e;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .conjugation-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .conjugation-item {
+            background: white;
+            padding: 10px 8px;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid #7ba1a5;
+        }
+
+        .pronoun {
+            font-weight: 600;
+            color: #7ba1a5;
+            font-size: 0.85rem;
+        }
+
+        .pronoun-english {
+            color: #666;
+            font-size: 0.7rem;
+        }
+
+        .ending {
+            font-weight: 700;
+            color: #ef7c8e;
+            font-size: 0.9rem;
+            margin-top: 3px;
+        }
+
+        /* Steps */
+        .steps-box {
+            background: linear-gradient(135deg, #7ba1a5 0%, #6b8d94 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .step-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+
+        .step-icon {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .step-number {
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Examples */
+        .example-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #7ba1a5;
+            margin-bottom: 12px;
+        }
+
+        .example-title {
+            color: #7ba1a5;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .example-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+        }
+
+        .example-step {
+            text-align: center;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            border: 2px solid #ffe8e3;
+            font-size: 0.75rem;
+        }
+
+        /* Common Examples Grid */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .example-item {
+            background: rgba(239,124,142,0.1);
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 3px solid #ef7c8e;
+        }
+
+        .example-spanish {
+            font-weight: 600;
+            color: #373f45;
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+        }
+
+        .example-english {
+            color: #666;
+            font-style: italic;
+            font-size: 0.75rem;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #ef7c8e;
+            margin-top: 12px;
+        }
+
+        .warning-box h3 {
+            color: #ef7c8e;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .warning-box p {
+            font-size: 0.8rem;
+            color: #373f45;
+        }
+
+        /* Footer */
+        .footer {
+            background: #373f45;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #ef7c8e !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .conjugation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .verb-emoji {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="verb-emoji">🎯</div>
+            <h1>VERBOS REGULARES -AR</h1>
+            <div class="subtitle">Present Tense Conjugation | Spanish Learning Edge</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>💡 What are Regular -AR Verbs?</h2>
+                <div class="intro-text">
+                    <p>• Regular -AR verbs form the largest group in Spanish and follow predictable patterns.</p>
+                    <p>• <strong>Infinitives</strong> are unconjugated verbs (trabajar, estudiar, caminar) that don't express who is doing the action.</p>
+                </div>
+            </div>
+
+            <!-- When to Use Section -->
+            <div class="section">
+                <h2>🎯 When to Use Present Tense</h2>
+                <div class="usage-grid">
+                    <div class="usage-item">
+                        <h3>✨ Current Truth</h3>
+                        <p>What is true now</p>
+                        <div class="usage-example">Soy estudiante <span style="font-size: 0.7rem;">(I am a student)</span></div>
+                    </div>
+                    <div class="usage-item">
+                        <h3>🔄 Regular Actions</h3>
+                        <p>What happens regularly</p>
+                        <div class="usage-example">Estudio todos los días <span style="font-size: 0.7rem;">(I study daily)</span></div>
+                    </div>
+                    <div class="usage-item">
+                        <h3>⏰ Right Now</h3>
+                        <p>What is happening now</p>
+                        <div class="usage-example">Camino a casa <span style="font-size: 0.7rem;">(I'm walking home)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Conjugate Section -->
+            <div class="section">
+                <h2>📝 How to Conjugate -AR Verbs</h2>
+                
+                <!-- Conjugation Table -->
+                <div class="conjugation-box">
+                    <h3>📊 Conjugation Endings</h3>
+                    <div class="conjugation-grid">
+                        <div class="conjugation-item">
+                            <div class="pronoun">Yo</div>
+                            <div class="pronoun-english">(I)</div>
+                            <div class="ending">-o</div>
+                        </div>
+                        <div class="conjugation-item">
+                            <div class="pronoun">Tú</div>
+                            <div class="pronoun-english">(You)</div>
+                            <div class="ending">-as</div>
+                        </div>
+                        <div class="conjugation-item">
+                            <div class="pronoun">Él/Ella</div>
+                            <div class="pronoun-english">(He/She)</div>
+                            <div class="ending">-a</div>
+                        </div>
+                        <div class="conjugation-item">
+                            <div class="pronoun">Usted</div>
+                            <div class="pronoun-english">(You formal)</div>
+                            <div class="ending">-a</div>
+                        </div>
+                        <div class="conjugation-item">
+                            <div class="pronoun">Nosotros</div>
+                            <div class="pronoun-english">(We)</div>
+                            <div class="ending">-amos</div>
+                        </div>
+                        <div class="conjugation-item">
+                            <div class="pronoun">Ellos/as</div>
+                            <div class="pronoun-english">(They)</div>
+                            <div class="ending">-an</div>
+                        </div>
+                        <div class="conjugation-item">
+                            <div class="pronoun">Ustedes</div>
+                            <div class="pronoun-english">(You all)</div>
+                            <div class="ending">-an</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steps -->
+                <h3>Steps to Conjugate</h3>
+                <div class="steps-box">
+                    <div class="steps-grid">
+                        <div class="step-item">
+                            <div class="step-icon">📝</div>
+                            <div class="step-number">Step 1</div>
+                            <div>VERB IN INFINITIVE</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">✂️</div>
+                            <div class="step-number">Step 2</div>
+                            <div>REMOVE THE -AR</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">👤</div>
+                            <div class="step-number">Step 3</div>
+                            <div>DETERMINE WHO</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">🔧</div>
+                            <div class="step-number">Step 4</div>
+                            <div>ADD NEW ENDING</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Examples -->
+                <div class="example-box">
+                    <h4 class="example-title">Example: caminar (to walk) → ella camina (she walks)</h4>
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <div style="font-weight: 700; color: #ef7c8e;">camin<span style="background: #ef7c8e; color: white; padding: 1px 3px; border-radius: 2px;">AR</span></div>
+                            <div style="color: #666; margin-top: 2px;">(to walk)</div>
+                        </div>
+                        <div class="example-step">
+                            <div style="font-weight: 700; color: #7ba1a5;">camin_</div>
+                            <div style="color: #666; margin-top: 2px;">(stem)</div>
+                        </div>
+                        <div class="example-step">
+                            <div style="font-weight: 600; color: #373f45;">ella</div>
+                            <div style="color: #666; margin-top: 2px;">(she)</div>
+                        </div>
+                        <div class="example-step">
+                            <div style="font-weight: 700; color: #ef7c8e;">camin<span style="background: #ef7c8e; color: white; padding: 1px 3px; border-radius: 2px;">a</span></div>
+                            <div style="color: #666; margin-top: 2px;">(she walks)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Examples Section -->
+            <div class="section">
+                <h2>💡 Common Examples</h2>
+                <div class="examples-grid">
+                    <div class="example-item">
+                        <div class="example-spanish">Yo trabajo en una oficina</div>
+                        <div class="example-english">I work in an office</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">¿Tú estudias español?</div>
+                        <div class="example-english">Do you study Spanish?</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Ella camina al parque</div>
+                        <div class="example-english">She walks to the park</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Nosotros hablamos inglés</div>
+                        <div class="example-english">We speak English</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Ellos viajan mucho</div>
+                        <div class="example-english">They travel a lot</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">¿Ustedes practican deportes?</div>
+                        <div class="example-english">Do you all practice sports?</div>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>⚠️ Important Note</h3>
+                    <p>The verb <strong>"gustar" (to like)</strong> does NOT follow these regular -AR patterns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Spanish Learning Edge LLC | Professional Spanish Grammar Resources for Educators
+        </div>
+    </div>
+</body>
+</html>
