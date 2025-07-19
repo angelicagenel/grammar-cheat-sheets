@@ -322,24 +322,121 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 20px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header .subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .content {
+                padding: 20px;
+                gap: 15px;
+            }
+            
+            .section {
+                padding: 15px;
+                border-radius: 10px;
+            }
+            
+            .section h2 {
+                font-size: 1.1rem;
+            }
+            
             .conjugation-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+            }
+            
+            .conjugation-item {
+                padding: 8px 5px;
+            }
+            
+            .pronoun {
+                font-size: 0.8rem;
+            }
+            
+            .pronoun-english {
+                font-size: 0.65rem;
+            }
+            
+            .ending {
+                font-size: 0.85rem;
             }
             
             .steps-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+            }
+            
+            .step-item {
+                padding: 8px;
+                font-size: 0.7rem;
             }
             
             .usage-grid {
                 grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .usage-item {
+                padding: 10px;
             }
             
             .examples-grid {
                 grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .example-item {
+                padding: 8px;
+            }
+            
+            .example-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+            }
+            
+            .example-step {
+                padding: 6px;
+                font-size: 0.7rem;
             }
             
             .verb-emoji {
                 display: none;
+            }
+            
+            .intro-text {
+                font-size: 0.85rem;
+            }
+            
+            .usage-example {
+                font-size: 0.75rem;
+            }
+            
+            .warning-box {
+                padding: 10px;
+            }
+            
+            .warning-box h3 {
+                font-size: 0.85rem;
+            }
+            
+            .warning-box p {
+                font-size: 0.75rem;
             }
         }
     </style>
