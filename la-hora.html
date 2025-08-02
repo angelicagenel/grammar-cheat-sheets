@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telling Time in Spanish - Grammar Cheat Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            color: #373f45;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ef7c8e 0%, #db6565 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .verb-emoji {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .grid-two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255,255,255,0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #ef7c8e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #ef7c8e;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #373f45;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Introduction */
+        .intro-text {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .intro-text p {
+            margin-bottom: 10px;
+        }
+
+        .intro-text ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .intro-text li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        /* Questions Table */
+        .questions-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .questions-table th {
+            background: #7ba1a5;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .questions-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+        }
+
+        .questions-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .table-example {
+            background: rgba(239,124,142,0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            border-left: 3px solid #ef7c8e;
+        }
+
+        .table-example strong {
+            color: #373f45;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .table-example em {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Time Examples - Elegant Cards */
+        .time-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .time-item {
+            background: rgba(123,161,165,0.08);
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #7ba1a5;
+            transition: all 0.2s ease;
+        }
+
+        .time-item:hover {
+            background: rgba(123,161,165,0.12);
+            transform: translateY(-2px);
+        }
+
+        .time-spanish {
+            font-weight: 600;
+            color: #373f45;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .time-english {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .time-note {
+            font-size: 0.8rem;
+            color: #7ba1a5;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* Special expressions - Refined Cards */
+        .special-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .special-item {
+            background: rgba(239,124,142,0.08);
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #ef7c8e;
+            transition: all 0.2s ease;
+        }
+
+        .special-item:hover {
+            background: rgba(239,124,142,0.12);
+            transform: translateY(-2px);
+        }
+
+        .special-term {
+            font-weight: 700;
+            color: #ef7c8e;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .special-example {
+            font-weight: 600;
+            color: #373f45;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        .special-translation {
+            color: #666;
+            font-style: italic;
+            font-size: 0.85rem;
+        }
+
+        /* Simple Lists */
+        .simple-list {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .simple-list li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .simple-list strong {
+            color: #ef7c8e;
+        }
+
+        .simple-list em {
+            color: #666;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #ef7c8e;
+            margin-top: 15px;
+        }
+
+        .warning-box h3 {
+            color: #ef7c8e;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning-box p {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* Bonus Section */
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .bonus-item {
+            background: rgba(123,161,165,0.08);
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #7ba1a5;
+            transition: all 0.2s ease;
+        }
+
+        .bonus-item:hover {
+            background: rgba(123,161,165,0.12);
+            transform: translateY(-2px);
+        }
+
+        .bonus-spanish {
+            font-weight: 600;
+            color: #373f45;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .bonus-english {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* Note box */
+        .note-box {
+            background: rgba(123,161,165,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #7ba1a5;
+            margin-top: 15px;
+        }
+
+        .note-box p {
+            font-weight: 500;
+            color: #373f45;
+        }
+
+        /* Footer */
+        .footer {
+            background: #373f45;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #ef7c8e !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-two-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .time-examples {
+                grid-template-columns: 1fr;
+            }
+            
+            .special-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bonus-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .verb-emoji {
+                display: none;
+            }
+            
+            .questions-table th,
+            .questions-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="verb-emoji">🕐</div>
+            <h1>LA HORA EN ESPAÑOL</h1>
+            <div class="subtitle">Time Expressions & Questions | Spanish Learning Edge</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>🔤 Before You Begin...</h2>
+                <div class="intro-text">
+                    <p>To tell time in Spanish, students need to:</p>
+                    <ul>
+                        <li>Know <strong>numbers 1–30</strong> (especially 1–12 and key increments like 15, 30, and 45)</li>
+                        <li>Use the <strong>present tense of the verb <em>ser</em></strong> (<em>es / son</em>)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Questions Section -->
+            <div class="section">
+                <h2>⏱️ How to Ask About Time — Two Different Questions</h2>
+                <table class="questions-table">
+                    <tr>
+                        <th>¿Qué hora es?</th>
+                        <th>¿A qué hora es...?</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Used to ask the <strong>current time</strong>.</p>
+                            <p><em>What time is it?</em></p>
+                            <p>→ Response: Use <strong>es / son</strong></p>
+                            <div class="table-example">
+                                <strong>¿Qué hora es?</strong>
+                                <em>What time is it?</em><br>
+                                <strong>Son las tres de la tarde.</strong>
+                                <em>It's 3:00 PM.</em>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Used to ask <strong>at what time something happens</strong>.</p>
+                            <p><em>At what time is...?</em></p>
+                            <p>→ Response: Use <strong>a la / a las</strong></p>
+                            <div class="table-example">
+                                <strong>¿A qué hora es la fiesta?</strong>
+                                <em>At what time is the party?</em><br>
+                                <strong>La fiesta es a las cinco.</strong>
+                                <em>The party is at 5:00.</em>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="note-box">
+                    <p><strong>Note:</strong> Both structures deal with time, but the <strong>first asks for the time now</strong>, and the <strong>second asks for the time of an event</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Two Column Section -->
+            <div class="grid-two-columns">
+                <!-- Basic Time Structure -->
+                <div class="section">
+                    <h2>🕐 Stating the Time</h2>
+                    <div class="time-examples">
+                        <div class="time-item">
+                            <div class="time-spanish">Es la una</div>
+                            <div class="time-english">It's one o'clock</div>
+                            <div class="time-note">Only for 1:00</div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-spanish">Son las cuatro</div>
+                            <div class="time-english">It's four o'clock</div>
+                            <div class="time-note">For all other hours (2-12)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adding Minutes -->
+                <div class="section">
+                    <h2>➕ Adding Minutes</h2>
+                    <div class="time-examples">
+                        <div class="time-item">
+                            <div class="time-spanish">Son las dos y diez</div>
+                            <div class="time-english">It's 2:10</div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-spanish">Son las cuatro y cuarto</div>
+                            <div class="time-english">It's 4:15</div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-spanish">Son las nueve y media</div>
+                            <div class="time-english">It's 9:30</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Expressions -->
+            <div class="section">
+                <h2>🕓 Special Time Expressions</h2>
+                <div class="special-grid">
+                    <div class="special-item">
+                        <div class="special-term">en punto</div>
+                        <div class="special-example">Son las ocho en punto</div>
+                        <div class="special-translation">It's exactly 8:00</div>
+                    </div>
+                    <div class="special-item">
+                        <div class="special-term">el mediodía</div>
+                        <div class="special-example">Es el mediodía</div>
+                        <div class="special-translation">It's noon</div>
+                    </div>
+                    <div class="special-item">
+                        <div class="special-term">la medianoche</div>
+                        <div class="special-example">Es la medianoche</div>
+                        <div class="special-translation">It's midnight</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Section -->
+            <div class="section">
+                <h2>⚠️ Less Common: Subtracting Minutes (menos)</h2>
+                <div class="warning-box">
+                    <h3>⚠️ Note:</h3>
+                    <p>This is taught in many textbooks, but is <strong>less common in casual Mexican speech</strong>.</p>
+                </div>
+                <ul class="simple-list">
+                    <li><strong>Son las nueve menos diez.</strong> – <em>It's 8:50.</em></li>
+                    <li><strong>Es la una menos cuarto.</strong> – <em>It's 12:45.</em></li>
+                </ul>
+            </div>
+
+            <!-- Bonus Section -->
+            <div class="section">
+                <h2>💬 Bonus: Natural Ways to Ask the Time in Mexico</h2>
+                <div class="bonus-grid">
+                    <div class="bonus-item">
+                        <div class="bonus-spanish">¿Qué hora tienes?</div>
+                        <div class="bonus-english">Do you have the time?</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-spanish">¿Me das la hora?</div>
+                        <div class="bonus-english">Can you give me the time?</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-spanish">¿Me podrías decir la hora?</div>
+                        <div class="bonus-english">Could you tell me the time?</div>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <p><strong>Note:</strong> These expressions are common in Mexico and widely understood, but the most standard and school-taught form is still <strong>¿Qué hora es?</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Spanish Learning Edge LLC | Professional Spanish Grammar Resources for Educators
+        </div>
+    </div>
+</body>
+</html>
