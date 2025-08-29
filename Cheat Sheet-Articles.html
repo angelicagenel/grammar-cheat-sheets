@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Articles - Grammar Cheat Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            color: #373f45;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ef7c8e 0%, #db6565 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .verb-emoji {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .grid-two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .grid-three-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255,255,255,0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #ef7c8e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #ef7c8e;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #373f45;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Introduction */
+        .intro-text {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .intro-text p {
+            margin-bottom: 10px;
+        }
+
+        .intro-text strong {
+            color: #ef7c8e;
+        }
+
+        /* Articles Table */
+        .articles-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .articles-table th {
+            background: #7ba1a5;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .articles-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .articles-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .spanish-text {
+            font-weight: 600;
+            color: #373f45;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            font-size: 0.85rem;
+        }
+
+        /* When to Use Box */
+        .usage-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #373f45;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 2px solid #dee2e6;
+        }
+
+        .usage-box h3 {
+            color: #373f45;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .usage-item {
+            background: rgba(255,255,255,0.9);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+
+        .usage-item h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+            color: #373f45;
+        }
+
+        .usage-item p {
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .usage-example {
+            font-style: italic;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: #6c757d;
+        }
+
+        /* Exception Box */
+        .exception-box {
+            background: rgba(239,124,142,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #ef7c8e;
+            margin-top: 15px;
+        }
+
+        .exception-box h3 {
+            color: #ef7c8e;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .exception-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .exception-item {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            border-left: 3px solid #ef7c8e;
+        }
+
+        /* Examples Grid */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .example-item {
+            background: rgba(239,124,142,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ef7c8e;
+        }
+
+        .example-spanish {
+            font-weight: 600;
+            color: #373f45;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .example-english {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* Contraction Box */
+        .contraction-box {
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #ef7c8e;
+        }
+
+        .contraction-box h3 {
+            color: #ef7c8e;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .contraction-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contraction-formula {
+            font-size: 1.1rem;
+            color: #7ba1a5;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #373f45;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #ef7c8e !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .grid-two-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-three-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .verb-emoji {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="verb-emoji">📰</div>
+            <h1>LOS ARTÍCULOS</h1>
+            <div class="subtitle">Definite & Indefinite Articles | Spanish Learning Edge</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>💡 Why Articles Matter</h2>
+                <div class="intro-text">
+                    <p>• Unlike English's simple "the/a/an" system, Spanish articles must match the <strong>gender</strong> (masculine/feminine) and <strong>number</strong> (singular/plural) of every noun.</p>
+                    <p>• Spanish uses articles in many places where English doesn't (with abstract concepts, body parts, days of the week).</p>
+                    <p>• Every noun in Spanish has a gender—this is grammatical, not biological. A table (la mesa) is feminine, a book (el libro) is masculine.</p>
+                </div>
+            </div>
+
+            <!-- Two Column Section - When to Use -->
+            <div class="grid-two-columns">
+                <!-- Definite Articles -->
+                <div class="section">
+                    <div class="usage-box">
+                        <h3>🎯 Definite Articles (the)</h3>
+                        <div class="usage-grid">
+                            <div class="usage-item">
+                                <h4>Specific things</h4>
+                                <p>Things both speaker and listener know about</p>
+                                <div class="usage-example">El libro de María (María's specific book)</div>
+                            </div>
+                            <div class="usage-item">
+                                <h4>General concepts</h4>
+                                <p>Abstract ideas or categories</p>
+                                <div class="usage-example">El amor es importante (Love is important)</div>
+                            </div>
+                            <div class="usage-item">
+                                <h4>Body parts</h4>
+                                <p>Instead of possessives</p>
+                                <div class="usage-example">Me duele la cabeza (My head hurts)</div>
+                            </div>
+                            <div class="usage-item">
+                                <h4>Days & time</h4>
+                                <p>Days of week, telling time</p>
+                                <div class="usage-example">El lunes; Son las tres</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indefinite Articles -->
+                <div class="section">
+                    <div class="usage-box">
+                        <h3>🎯 Indefinite Articles (a/an/some)</h3>
+                        <div class="usage-grid">
+                            <div class="usage-item">
+                                <h4>Unknown items</h4>
+                                <p>First time mentioning</p>
+                                <div class="usage-example">Busco un libro (I'm looking for a book)</div>
+                            </div>
+                            <div class="usage-item">
+                                <h4>Any member of group</h4>
+                                <p>Non-specific</p>
+                                <div class="usage-example">Necesito un médico (I need a doctor)</div>
+                            </div>
+                            <div class="usage-item">
+                                <h4>Quantities (plural)</h4>
+                                <p>Some/a few</p>
+                                <div class="usage-example">Compré unas manzanas (I bought some apples)</div>
+                            </div>
+                            <div class="usage-item">
+                                <h4>Approximate numbers</h4>
+                                <p>About/around</p>
+                                <div class="usage-example">Llegué a unas cinco (I arrived around five)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Reference Section -->
+            <div class="section">
+                <h2>📝 Quick Reference</h2>
+                <div class="grid-two-columns">
+                    <div>
+                        <table class="articles-table">
+                            <tr>
+                                <th colspan="2">DEFINITE (the)</th>
+                            </tr>
+                            <tr>
+                                <td><span class="spanish-text">el</span> <span class="english-text">masc. sing.</span></td>
+                                <td><span class="spanish-text">la</span> <span class="english-text">fem. sing.</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="spanish-text">los</span> <span class="english-text">masc. plural</span></td>
+                                <td><span class="spanish-text">las</span> <span class="english-text">fem. plural</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="articles-table">
+                            <tr>
+                                <th colspan="2">INDEFINITE (a/an/some)</th>
+                            </tr>
+                            <tr>
+                                <td><span class="spanish-text">un</span> <span class="english-text">masc. sing.</span></td>
+                                <td><span class="spanish-text">una</span> <span class="english-text">fem. sing.</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="spanish-text">unos</span> <span class="english-text">masc. plural</span></td>
+                                <td><span class="spanish-text">unas</span> <span class="english-text">fem. plural</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exceptions & Special Rules Section -->
+            <div class="section">
+                <h2>🚨 Exceptions & Special Rules</h2>
+                
+                <!-- Contractions -->
+                <div class="contraction-box" style="margin-bottom: 20px;">
+                    <h3>⚠️ Mandatory Contractions</h3>
+                    <div class="grid-two-columns">
+                        <div class="contraction-item">
+                            <div class="contraction-formula">a + el = al</div>
+                            <div>Voy <strong>al</strong> parque <span class="english-text">(to the park)</span></div>
+                        </div>
+                        <div class="contraction-item">
+                            <div class="contraction-formula">de + el = del</div>
+                            <div>El libro <strong>del</strong> profesor <span class="english-text">(the teacher's book)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three column grid for exceptions -->
+                <div class="grid-three-columns">
+                    <div class="exception-box">
+                        <h3>NO Article with Professions</h3>
+                        <div style="margin-top: 10px; font-size: 0.9rem;">
+                            ✅ Soy profesor <span class="english-text">(I am a teacher)</span><br>
+                            ❌ Soy un profesor<br>
+                            <strong>BUT with adjective:</strong> Es una doctora excelente
+                        </div>
+                    </div>
+
+                    <div class="exception-box">
+                        <h3>Feminine + 'el'</h3>
+                        <div class="exception-grid">
+                            <div class="exception-item">el agua → las aguas</div>
+                            <div class="exception-item">el águila → las águilas</div>
+                            <div class="exception-item">el alma → las almas</div>
+                            <div class="exception-item">el hacha → las hachas</div>
+                        </div>
+                        <p style="margin-top: 8px; font-size: 0.8rem;">Still feminine! → el agua <strong>fría</strong></p>
+                    </div>
+
+                    <div class="exception-box">
+                        <h3>Gender Exceptions</h3>
+                        <div class="exception-grid">
+                            <div class="exception-item">el problema <span class="english-text">(masc.)</span></div>
+                            <div class="exception-item">el mapa <span class="english-text">(masc.)</span></div>
+                            <div class="exception-item">el día <span class="english-text">(masc.)</span></div>
+                            <div class="exception-item">la mano <span class="english-text">(fem.)</span></div>
+                            <div class="exception-item">la foto <span class="english-text">(fem.)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examples Section -->
+            <div class="section">
+                <h2>💡 Key Contrasts: Spanish vs English</h2>
+                <div class="examples-grid">
+                    <div class="example-item">
+                        <div class="example-spanish">Me gusta el café</div>
+                        <div class="example-english">I like coffee (no article in English)</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Los perros son leales</div>
+                        <div class="example-english">Dogs are loyal (general statement)</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Trabajo los lunes</div>
+                        <div class="example-english">I work on Mondays</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Lávate las manos</div>
+                        <div class="example-english">Wash your hands (not "tus manos")</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Es médico</div>
+                        <div class="example-english">She is a doctor (no article)</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Hay leche en el refrigerador</div>
+                        <div class="example-english">There's milk in the fridge</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Spanish Learning Edge LLC | Professional Spanish Grammar Resources for Educators
+        </div>
+    </div>
+</body>
+</html>
