@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Gender & Number Agreement - Grammar Cheat Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            color: #373f45;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ef7c8e 0%, #db6565 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .verb-emoji {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .grid-two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255,255,255,0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #ef7c8e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #ef7c8e;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #373f45;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Pattern Boxes */
+        .pattern-box {
+            background: linear-gradient(135deg, #7ba1a5 0%, #6b8d94 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-box h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .pattern-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .pattern-ending {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .pattern-example {
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        /* Mnemonic Device Box */
+        .mnemonic-box {
+            background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #ef7c8e;
+        }
+
+        .mnemonic-title {
+            color: #ef7c8e;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mnemonic-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .mnemonic-column {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .mnemonic-header {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .masculine-header {
+            color: #7ba1a5;
+        }
+
+        .feminine-header {
+            color: #ef7c8e;
+        }
+
+        .mnemonic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mnemonic-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mnemonic-letter {
+            font-weight: 700;
+            color: #373f45;
+            font-size: 1.1rem;
+        }
+
+        /* Rules Table */
+        .rules-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .rules-table th {
+            background: #7ba1a5;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .rules-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .rules-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Exception Box */
+        .exception-box {
+            background: rgba(239,124,142,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #ef7c8e;
+            margin-top: 15px;
+        }
+
+        .exception-box h3 {
+            color: #ef7c8e;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .exception-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .exception-item {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            border-left: 3px solid #ef7c8e;
+        }
+
+        /* Examples Grid */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .example-item {
+            background: rgba(239,124,142,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ef7c8e;
+        }
+
+        .example-spanish {
+            font-weight: 600;
+            color: #373f45;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .example-english {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* Agreement Formula */
+        .formula-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .formula-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #373f45;
+        }
+
+        .formula-highlight {
+            color: #ef7c8e;
+        }
+
+        /* Footer */
+        .footer {
+            background: #373f45;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #ef7c8e !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .grid-two-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .mnemonic-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .verb-emoji {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="verb-emoji">👦🏽👧🏾</div>
+            <h1>CONCORDANCIA</h1>
+            <div class="subtitle">Gender & Number Agreement | Spanish Learning Edge</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>💡 Why Agreement is Challenging</h2>
+                <div style="margin-top: 15px; line-height: 1.8;">
+                    <p>• Every Spanish noun has a <strong>grammatical gender</strong> (masculine or feminine) that rarely relates to biological gender.</p>
+                    <p>• Articles, adjectives, and some pronouns must match the noun's gender AND number.</p>
+                    <p>• English speakers struggle because English has no gender system—we say "the" for everything!</p>
+                    <div class="formula-box">
+                        <div class="formula-text">
+                            <span class="formula-highlight">Article</span> + <span class="formula-highlight">Noun</span> + <span class="formula-highlight">Adjective</span><br>
+                            = ALL must match in gender & number
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LONERS/DIJON Mnemonic -->
+            <div class="section">
+                <h2>🧠 Memory Device: LONERS vs DIJON</h2>
+                <div class="mnemonic-box">
+                    <div class="mnemonic-title">"Guys are LONERS, Girls like DIJON mustard"</div>
+                    <div class="mnemonic-grid">
+                        <div class="mnemonic-column">
+                            <div class="mnemonic-header masculine-header">LONERS (Masculine)</div>
+                            <ul class="mnemonic-list">
+                                <li><span class="mnemonic-letter">L</span>: e<strong>l</strong> pape<strong>l</strong>, e<strong>l</strong> hote<strong>l</strong></li>
+                                <li><span class="mnemonic-letter">O</span>: el libr<strong>o</strong>, el gat<strong>o</strong></li>
+                                <li><span class="mnemonic-letter">N</span>: el pa<strong>n</strong>, el tre<strong>n</strong></li>
+                                <li><span class="mnemonic-letter">E</span>: el coch<strong>e</strong>, el café</li>
+                                <li><span class="mnemonic-letter">R</span>: el amo<strong>r</strong>, el colo<strong>r</strong></li>
+                                <li><span class="mnemonic-letter">S</span>: el me<strong>s</strong>, el país</li>
+                            </ul>
+                        </div>
+                        <div class="mnemonic-column">
+                            <div class="mnemonic-header feminine-header">DIJON (Feminine)</div>
+                            <ul class="mnemonic-list">
+                                <li><span class="mnemonic-letter">D</span>: la ciuda<strong>d</strong>, la verda<strong>d</strong></li>
+                                <li><span class="mnemonic-letter">I</span>: <em>not an ending (filler)</em></li>
+                                <li><span class="mnemonic-letter">J</span>: <em>not an ending (filler)</em></li>
+                                <li><span class="mnemonic-letter">Ó</span>: la canci<strong>ón</strong>, la televisi<strong>ón</strong></li>
+                                <li><span class="mnemonic-letter">N</span>: la image<strong>n</strong>, la razó<strong>n</strong></li>
+                                <li><span class="mnemonic-letter">A</span>: la cas<strong>a</strong>, la mes<strong>a</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gender Patterns Section -->
+            <div class="section">
+                <h2>👧🏽👦🏽 Gender Patterns</h2>
+                <div class="grid-two-columns">
+                    <div class="pattern-box">
+                        <h3>Usually Masculine</h3>
+                        <div class="pattern-grid">
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-o</div>
+                                <div class="pattern-example">el libro</div>
+                            </div>
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-or</div>
+                                <div class="pattern-example">el doctor</div>
+                            </div>
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-aje</div>
+                                <div class="pattern-example">el viaje</div>
+                            </div>
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-ma*</div>
+                                <div class="pattern-example">el problema</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: linear-gradient(135deg, #ef7c8e 0%, #db6565 100%);">
+                        <h3>Usually Feminine</h3>
+                        <div class="pattern-grid">
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-a</div>
+                                <div class="pattern-example">la casa</div>
+                            </div>
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-ción</div>
+                                <div class="pattern-example">la canción</div>
+                            </div>
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-dad</div>
+                                <div class="pattern-example">la ciudad</div>
+                            </div>
+                            <div class="pattern-item">
+                                <div class="pattern-ending">-tad</div>
+                                <div class="pattern-example">la libertad</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Making Plurals Section -->
+            <div class="section">
+                <h2>🔢 Making Plurals</h2>
+                <div class="grid-two-columns">
+                    <div>
+                        <table class="rules-table">
+                            <tr>
+                                <th>If noun ends in...</th>
+                                <th>Example</th>
+                                <th>Add...</th>
+                            </tr>
+                            <tr>
+                                <td>Vowel (a, e, i, o, u)</td>
+                                <td>casa → casas</td>
+                                <td><strong>-s</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Consonant</td>
+                                <td>profesor → profesores</td>
+                                <td><strong>-es</strong></td>
+                            </tr>
+                            <tr>
+                                <td>-z</td>
+                                <td>lápiz → lápices</td>
+                                <td>Change to <strong>-ces</strong></td>
+                            </tr>
+                            <tr>
+                                <td>-ión</td>
+                                <td>canción → canciones</td>
+                                <td>Drop accent + <strong>-es</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="exception-box">
+                        <h3>👧🏽👦🏽 Mixed Groups = Masculine Plural</h3>
+                        <p>👧🏽👧🏾 2 sisters = las hermanas (fem.)<br>
+                        👦🏽👧🏽 1 brother + 1 sister = los hermanos (masc.)<br>
+                        👧🏽👧🏾👧🏻...👦🏽 99 girls + 1 boy = masculine plural!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agreement Examples -->
+            <div class="section">
+                <h2>💡 Agreement in Action</h2>
+                <div class="examples-grid">
+                    <div class="example-item">
+                        <div class="example-spanish"><strong>El</strong> perr<strong>o</strong> <strong>es</strong> negr<strong>o</strong></div>
+                        <div class="example-english">The dog is black</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish">Ahí hay <strong>unas</strong> cas<strong>as</strong> bonit<strong>as</strong></div>
+                        <div class="example-english">There are some pretty houses there</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish"><strong>La</strong> niñ<strong>a</strong> <strong>está</strong> content<strong>a</strong></div>
+                        <div class="example-english">The girl is happy</div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-spanish"><strong>Los</strong> gat<strong>os</strong> <strong>son</strong> blanc<strong>os</strong></div>
+                        <div class="example-english">The cats are white</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checklist Section -->
+            <div class="section">
+                <div style="background: linear-gradient(135deg, #ffe8e3 0%, #f8ebec 100%); padding: 20px; border-radius: 15px; border: 2px solid #ef7c8e;">
+                    <h3 style="color: #ef7c8e; margin-bottom: 15px;">📝 Quick Checklist</h3>
+                    <div style="margin-left: 10px;">
+                        <label style="display: flex; align-items: center; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" style="margin-right: 10px; transform: scale(1.2);"> Article matches noun? (el libro, la mesa)
+                        </label>
+                        <label style="display: flex; align-items: center; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" style="margin-right: 10px; transform: scale(1.2);"> Adjective matches noun? (libro nuevo, mesa nueva)
+                        </label>
+                        <label style="display: flex; align-items: center; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" style="margin-right: 10px; transform: scale(1.2);"> Plural forms match? (los libros nuevos)
+                        </label>
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="margin-right: 10px; transform: scale(1.2);"> Mixed group = masculine? (los estudiantes)
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Spanish Learning Edge LLC | Professional Spanish Grammar Resources for Educators
+        </div>
+    </div>
+</body>
+</html>
